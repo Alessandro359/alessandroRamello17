@@ -76,7 +76,5 @@ public class PlayerMovment : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center,boxCollider.bounds.size,0, new Vector2(transform.localScale.x,0),0.1f,wallLayer);
         return raycastHit.collider != null;
     }
-    public bool CanAttack(){
-        return horiziontalInput == 0 && IsGrounded() && !OnWall();
-    }
+
 }
